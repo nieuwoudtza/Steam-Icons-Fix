@@ -9,6 +9,15 @@ namespace Steam_Icons_Fix
     {
         static void Main(string[] args)
         {
+            Console.Title = "Steam Icons Fix";
+
+            if (args.Length == 0)
+            {
+                Console.Write("Drag and drop the desired files or directories onto this executable");
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+
             List<string> files = new List<string>();
             for (int i = 0; i < args.Length; i++)
             {
